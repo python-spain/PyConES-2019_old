@@ -17,3 +17,8 @@ Files of the English website:
  * sponsors.html
  * contact.html
  * sponsorhip_en.pdf
+
+## To Do:
+
+ * Add mailchimp account to the subscriptions button
+ * Add language switcher
