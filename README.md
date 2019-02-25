@@ -21,4 +21,4 @@ Files of the English website:
 ## To Do:
 
  * Add mailchimp account to the subscriptions button
- * Add language switcher
+ * Add language switcher :heavy_check_mark:
