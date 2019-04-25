@@ -1,0 +1,75 @@
+@media (min-width: 775px) {
+    .carousel-caption {
+        bottom: 20%;
+    }
+    .carousel-caption h3{
+        font-size: 300%;
+        font-weight: bolder;
+    }
+    .carousel-caption p{
+        font-size: 200%;
+    }
+}
+
+@media (max-width: 775px) {
+    .carousel-caption {
+        bottom: 1%;
+        padding-bottom: 0px;
+    }
+}
+
+.footer{
+    margin-top: 3em;
+    padding-top: 2em;
+    background-color: black;
+    max-width: 100%;
+    color: white;
+    font-size: 150%;
+}
+a{
+    color: white;
+}
+.icons{
+    margin-bottom: 1em;
+}
+.newsletter{
+    margin-bottom: 2em;
+}
+.newsletter-form{
+    margin-top: 1em;
+}
+
+.infocard_img{
+    max-width: 80%;
+}
+.card-img-top{
+    margin-top: 1em;
+}
+
+#keyspeakers{
+    max-width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.inforow{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    max-width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.navbar{
+    background-color: black !important;
+}
+.navbar-logo{
+    max-width: 100px;
+}
+#app {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
