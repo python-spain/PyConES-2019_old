@@ -1,0 +1,16 @@
+branches:
+  only:
+  - master
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_7162ab489ab9_key -iv $encrypted_7162ab489ab9_iv -in travis_access.enc -out travis_access -d
+
+install:
+  - eval $(ssh-agent -s)
+  - chmod 600 travis_access && ssh-add travis_access
+  - mkdir -p ~/.ssh
+  - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+
+script:
+  - ssh pycones@2019.es.pycon.org && cd pycones2019 && docker-compose build && docker-compose up
+
