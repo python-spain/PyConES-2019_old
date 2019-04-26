@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: pycones2019:latest
+    ports:
+      - "5006:80"
