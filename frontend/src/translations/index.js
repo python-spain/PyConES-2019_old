@@ -75,7 +75,7 @@ const messages = {
                 "desc": "Lead Data Scientist en StyleSage. Es un profesional multidisciplinar con más de 11 años de experiencia en el área de inteligencia artificial, habiendo trabajado de investigador, ingeniero, profesor y consultor.",
             },
             "soon":{
-                "desc": "Una sorpresa para la comunidad, estate atenta!",
+                "desc": "Una sorpresa para la comunidad, estate atent@!",
             }
         },
     }
