@@ -10,7 +10,7 @@
             <InfoCard
                 class="col-sm-10 offset-sm-1 col-lg-4 offset-lg-0"
                 :title="$t('info.sponsors.title')"
-                image_src="http://d36m266ykvepgv.cloudfront.net/uploads/media/HsFp1O2KHY/s-368-252/icon-sponsors2.png"
+                image_src="https://d36m266ykvepgv.cloudfront.net/uploads/media/HsFp1O2KHY/s-368-252/icon-sponsors2.png"
                 :description="$t('info.sponsors.desc')"
                 :link="$t('info.sponsors.file')"
                 :button_text="$t('info.sponsors.button')"
