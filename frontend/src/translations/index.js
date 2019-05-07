@@ -34,6 +34,9 @@ const messages = {
             "fj": {
                 "desc": "Lead Data Scientist at StyleSage. A multidisciplinar professional with more than 11 years of experience in AI. Has worked as investigator, engineer, professor and consultant.",
             },
+            "mabel": {
+                "desc": "Mabel is an aeronautical engineer and works developing methods and tools for the study of plane flights simulations. Co-organizer of PyLadies Madrid and other Python events like Django Girls.",
+            },
             "soon":{
                 "desc": "A surprise for the community, keep a look out",
             }
@@ -73,6 +76,9 @@ const messages = {
             },
             "fj": {
                 "desc": "Lead Data Scientist en StyleSage. Es un profesional multidisciplinar con más de 11 años de experiencia en el área de inteligencia artificial, habiendo trabajado de investigador, ingeniero, profesor y consultor.",
+            },
+            "mabel": {
+                "desc": "Mabel es ingeniera aeronáutica y trabaja desarrollando métodos y herramientas para análisis de ensayos en vuelo de aviones. Co-organiza el grupo PyLadies Madrid y otros eventos de Python como Django Girls."
             },
             "soon":{
                 "desc": "Una sorpresa para la comunidad, estate atenta!",
