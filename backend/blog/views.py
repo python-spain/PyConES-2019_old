@@ -1,20 +1,16 @@
-from django.shortcuts import render
+import json
+
+from django.http import HttpResponse
 from blog.models import Post
 
 
 def blog_index(request):
-    posts = Post.objects.all().order_by('-created_on')  # The minus means is ordered descending, from newer to older
-    context = {
-            'posts': posts,
-    }
-    return render(request, 'blog_index.html', context)
+    return HttpResponse(json.dumps(Post.get_i18n_list()), status=200)
 
 
 def blog_detail(request, pk):
-    post = Post.objects.get(pk=pk)
-    context = {
-            'post': post,
-    }
-
-    return render(request, 'blog_detail.html', context)
+    try:
+        return HttpResponse(json.dumps(Post.get_i18n_post(pk)), status=200)
+    except:
+        return HttpResponse(status=404)
     
