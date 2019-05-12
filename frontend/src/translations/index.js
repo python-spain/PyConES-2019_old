@@ -81,7 +81,7 @@ const messages = {
                 "desc": "Mabel es ingeniera aeronáutica y trabaja desarrollando métodos y herramientas para análisis de ensayos en vuelo de aviones. Co-organiza el grupo PyLadies Madrid y otros eventos de Python como Django Girls."
             },
             "soon":{
-                "desc": "Una sorpresa para la comunidad, estate atenta!",
+                "desc": "Una sorpresa para la comunidad, estate atent@!",
             }
         },
     }
