@@ -9,12 +9,17 @@ class Post(models.Model):
     external_id = models.IntegerField()
     title = models.CharField(max_length=255)
     body = models.TextField()
+
+    author = models.CharField(max_length=250)
+    short_description = models.TextField()
+    image = models.CharField(max_length=2000)
+
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)  # Without add anytime the Post is modified the date updates
     lang = models.CharField(max_length=2) # ISO639-1
 
     @classmethod
-    def get_i18n_list(cls):
+    def get_i18n_list(cls, lang):
         posts = list(cls.objects.all().values('external_id', 'title', 'created_on', 'last_modified', 'lang'))
         grouped_posts = defaultdict(list)
         for post in posts:
@@ -22,7 +27,7 @@ class Post(models.Model):
         return [cls.merge_posts(post) for post in grouped_posts.values()]
 
     @classmethod
-    def get_i18n_post(cls, external_id):
+    def get_i18n_post(cls, external_id, lang):
         post_versions = list(cls.objects.filter(external_id=external_id).values())
         return cls.merge_posts(post_versions)
 

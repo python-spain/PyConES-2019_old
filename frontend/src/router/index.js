@@ -3,6 +3,8 @@ import Router from 'vue-router';
 
 const routerOptions = [
   { path: '/', component: 'Home' },
+  { path: '/blog', component: 'BlogIndex' },
+  { path: '/blog/:id', component: 'BlogPost' },
   { path: '/about', component: 'About' },
   { path: '/*', component: 'NotFound' },
 ];
@@ -13,7 +15,6 @@ const routes = routerOptions.map(route => {
     component: () => import(`@/components/${route.component}.vue`),
   };
 });
-
 
 Vue.use(Router);
 

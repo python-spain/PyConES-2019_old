@@ -12,10 +12,12 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import messages from './translations';
+import axios from 'axios';
 
 require('../static/css/styles.css')
 library.add(fas, fab);
 
+Vue.prototype.$eventBus = new Vue()
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false;
@@ -23,10 +25,15 @@ Vue.config.productionTip = false;
 Vue.use(BootstrapVue)
 Vue.use(VueI18n)
 
+let lang = navigator.language.substr(0,2)
+if(lang !== 'es' &&  lang !== 'en'){
+    lang = 'es';
+}
 const i18n = new VueI18n({
-    locale: 'es',
+    locale: lang,
     messages,
 })
+
 
 /* eslint-disable no-new */
 new Vue({
