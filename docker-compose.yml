@@ -2,12 +2,19 @@ version: '3'
 
 services:
   db:
-    image:postgres
-  web:
-    build: .
-    command: python backend/manage.py migrate && python backend/manage.py runserver 0.0.0.0:8000
+    image: postgres
+  backend:
+    build: ./backend
+    command:
+      - pipenv shell
+      - python manage.py migrate
+      - python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/backend
-    # image: pycones2019:latest
+    depends_on:
+      - db
+  frontend:
+    build: ./frontend
+    command: npm run build
     ports:
       - "5006:80"
