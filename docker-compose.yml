@@ -1,8 +1,20 @@
 version: '3'
 
 services:
-  web:
-    build: .
-    image: pycones2019:latest
+  db:
+    image: postgres
+  backend:
+    build: ./backend
+    command:
+      - pipenv shell
+      - python manage.py migrate
+      - python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/backend
+    depends_on:
+      - db
+  frontend:
+    build: ./frontend
+    command: npm run build
     ports:
       - "5006:80"
