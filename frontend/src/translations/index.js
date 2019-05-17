@@ -37,8 +37,8 @@ const messages = {
             "mabel": {
                 "desc": "Mabel is an aeronautical engineer and works developing methods and tools for the study of plane flights simulations. Co-organizer of PyLadies Madrid and other Python events like Django Girls.",
             },
-            "soon":{
-                "desc": "A surprise for the community, keep a look out",
+            "galindo":{
+                "desc": 'Works for the infrastructure Python team at Bloomberg L.P. He is a Python core developer focused on the development of the interpreter and parser. You can blame him for the PEP 570 if you find your code filled with "/". He spends his free time making black holes and general relativity simulations. Also has a cat but he doesn\'t code.',
             }
         },
     },
@@ -80,8 +80,8 @@ const messages = {
             "mabel": {
                 "desc": "Mabel es ingeniera aeronáutica y trabaja desarrollando métodos y herramientas para análisis de ensayos en vuelo de aviones. Co-organiza el grupo PyLadies Madrid y otros eventos de Python como Django Girls."
             },
-            "soon":{
-                "desc": "Una sorpresa para la comunidad, estate atenta!",
+            "galindo":{
+                "desc": 'Trabaja en el equipo de Python infrastructura en Bloomberg L.P. Es un core developer de Python centrado en el desarrollo del interprete y el parser. Puedes culparle por el PEP 570 si te encuentras todo tu código lleno de "/". Pasa su tiempo libre haciendo simulaciones de agujeros negros y relatividad general. También tiene un gato pero no programa.',
             }
         },
     }

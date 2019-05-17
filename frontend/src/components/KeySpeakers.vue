@@ -22,9 +22,9 @@
             />
             <InfoCard
                 class="col-sm-10 offset-sm-1 col-md-5 offset-md-0 col-lg-3"
-                title="Coming soon"
-                image_src="https://img.icons8.com/ios/420/user-male-filled.png"
-                :description="$t('speakers.soon.desc')"
+                title="Pablo Galindo"
+                image_src="static/keynoters/galindo.jpg"
+                :description="$t('speakers.galindo.desc')"
             />
         </div>
     </div>
