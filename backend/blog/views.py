@@ -9,7 +9,7 @@ class PostSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class PostViewSet(viewsets.ModelViewSet):
+class PostViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     renderer_classes = [renderers.JSONRenderer]
