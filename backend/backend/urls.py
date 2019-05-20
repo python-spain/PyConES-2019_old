@@ -16,7 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from rest_framework import routers
+
+from blog.views import PostViewSet
+
+
+router = routers.DefaultRouter()
+router.register(r"backend/post", PostViewSet)
+
+
 urlpatterns = [
+    path("", include(router.urls)),
     path('backend/admin/', admin.site.urls),
-    path('backend/post/', include('blog.urls'))
 ]
