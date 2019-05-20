@@ -1,0 +1,24 @@
+[
+    {
+        "model":"auth.user",
+        "pk":1,
+        "fields":{
+           "password":"pbkdf2_sha256$150000$fSraZX4i6UGG$xLqekaqZ5MDM8eKKy+h/Cjv9KsMj0frlMneDeruMIkU=",
+           "last_login":null,
+           "is_superuser":true,
+           "username":"pycones",
+           "first_name":"",
+           "last_name":"",
+           "email":"pycones@pycones.com",
+           "is_staff":true,
+           "is_active":true,
+           "date_joined":"2019-05-20T13:25:45.168Z",
+           "groups":[
+  
+           ],
+           "user_permissions":[
+  
+           ]
+       }
+    }
+]

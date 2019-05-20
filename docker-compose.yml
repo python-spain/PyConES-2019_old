@@ -1,4 +1,6 @@
 version: '3'
+volumes:
+  backend:
 
 services:
   web:
@@ -6,3 +8,29 @@ services:
     image: pycones2019:latest
     ports:
       - "5006:80"
+    links:
+      - backend
+    volumes:
+      - backend:/usr/src/app/static
+      - ./nginx:/etc/nginx/conf.d
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    links:
+      - database
+    ports:
+      - "8000:8000"
+    volumes:
+      - backend:/usr/src/app/static
+    command: ./docker-entrypoint.sh
+
+  database:
+    image: postgres:11.1
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=pycones_user
+      - POSTGRES_PASSWORD=pycones_pwd
+      - POSTGRES_DB=pycones
