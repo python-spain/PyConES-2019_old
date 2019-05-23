@@ -24,6 +24,10 @@ const messages = {
                 "title": "Call for papers!",
                 "desc": "Do you want to participate in the PyConES with your talk/workshop/poster? You can find all the information here",
                 "button": "Call for papers",
+            },
+            "tickets":{
+                "intro": "Tickets available now!",
+                "button": "Get your ticket"
             }
         },
         "speakers": {
@@ -67,6 +71,10 @@ const messages = {
                 "title": "Call for papers!",
                 "desc": "¿Quieres participar con tu charla/taller/poster en la PyConES? Aquí encontrarás toda la información necesaria",
                 "button": "Call for papers",
+            },
+            "tickets":{
+                "intro": "¡Entradas ya disponibles!",
+                "button": "Consigue tu entrada"
             }
         },
         "speakers": {
