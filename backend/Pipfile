@@ -6,7 +6,10 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-flask = "*"
+django = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
+djangorestframework = "==3.9.0"
 
 [requires]
 python_version = "3.7"
