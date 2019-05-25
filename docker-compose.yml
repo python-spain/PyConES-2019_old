@@ -28,8 +28,6 @@ services:
 
   database:
     image: postgres:11.1
-    ports:
-      - "5432:5432"
     environment:
       - POSTGRES_USER=pycones_user
       - POSTGRES_PASSWORD=pycones_pwd
