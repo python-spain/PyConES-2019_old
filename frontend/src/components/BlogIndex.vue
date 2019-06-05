@@ -37,7 +37,7 @@ export default {
     },
     methods: {
         set_first_post(){
-            axios.get('http://localhost:8000/post')
+            axios.get('http://localhost:8000/backend/post')
                 .then(response => {
                     this.last_post = response.data[response.data.length -1]
                     this.last_post.link = 'blog/' + this.last_post.external_id

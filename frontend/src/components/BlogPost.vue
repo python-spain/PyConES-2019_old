@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         set_post(){
-            axios.get('http://localhost:8000/post/' + this.$route.params.id)
+            axios.get('http://localhost:8000/backend/post/' + this.$route.params.id)
                 .then(response => {
                     this.post = response.data
                 })

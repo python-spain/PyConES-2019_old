@@ -6,17 +6,23 @@ class Post(models.Model):
 
     I18N_KEYS = ['title', 'body']
 
-    external_id = models.IntegerField()
-    title = models.CharField(max_length=255)
-    body = models.TextField()
+    external_id = models.IntegerField(default=0)
+    title = models.CharField(max_length=255, blank=True, null=True)
+    body = models.TextField(blank=True, null=True)
 
-    author = models.CharField(max_length=250)
-    short_description = models.TextField()
-    image = models.CharField(max_length=2000)
+    author = models.CharField(max_length=250, blank=True, null=True)
+    short_description = models.TextField(blank=True, null=True)
+    image = models.CharField(max_length=2000, blank=True, null=True)
 
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)  # Without add anytime the Post is modified the date updates
     lang = models.CharField(max_length=2) # ISO639-1
+
+    def __repr__(self):
+        return f"{self.external_id}[{self.lang}]{self.title}"
+
+    def __str__(self):
+        return self.__repr__()
 
     @classmethod
     def get_i18n_list(cls, lang):

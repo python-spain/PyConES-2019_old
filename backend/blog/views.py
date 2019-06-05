@@ -2,6 +2,7 @@ import json
 
 from django.http import HttpResponse
 from blog.models import Post
+from rest_framework import serializers, viewsets, renderers
 
 
 def blog_index(request):
@@ -22,3 +23,14 @@ def blog_detail(request, pk):
     except:
         return HttpResponse(status=404)
     
+
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = "__all__"
+
+
+class PostViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    renderer_classes = [renderers.JSONRenderer]
