@@ -1,6 +1,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
+import VueSimpleMarkdown from 'vue-simple-markdown';
 import App from './App';
 import router from './router';
 import VueI18n from 'vue-i18n';
@@ -12,21 +13,30 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import messages from './translations';
+import axios from 'axios';
+import 'vue-simple-markdown/dist/vue-simple-markdown.css';
 
 require('../static/css/styles.css')
 library.add(fas, fab);
 
+Vue.prototype.$eventBus = new Vue()
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue)
 Vue.use(VueI18n)
+Vue.use(VueSimpleMarkdown)
 
+let lang = navigator.language.substr(0,2)
+if(lang !== 'es' &&  lang !== 'en'){
+    lang = 'es';
+}
 const i18n = new VueI18n({
-    locale: 'es',
+    locale: lang,
     messages,
 })
+
 
 /* eslint-disable no-new */
 new Vue({

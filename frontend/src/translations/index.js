@@ -2,6 +2,10 @@ const messages = {
     'en': {
         'nav_info': "Information",
         'nav_speakers': "Key Speakers",
+        "blog":{
+            "prev_posts": "Previous posts",
+            "by": "by",
+        },
         "footer": {
             "follow": "Follow us",
             "touch": "Get in touch",
@@ -49,6 +53,10 @@ const messages = {
     'es': {
         'nav_info': "Información",
         'nav_speakers': "Ponentes",
+        "blog":{
+            "prev_posts": "Posts anteriores",
+            "by": "por",
+        },
         "footer": {
             "follow": "Síguenos",
             "touch": "Contacto",

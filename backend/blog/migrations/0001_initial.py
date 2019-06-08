@@ -23,4 +23,4 @@ class Migration(migrations.Migration):
                 ('lang', models.CharField(max_length=2)),
             ],
         ),
-    ]
+]

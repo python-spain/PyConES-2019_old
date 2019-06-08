@@ -1,4 +1,3 @@
-
 """backend URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -15,17 +14,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
 from rest_framework import routers
-
 from blog.views import PostViewSet
 
-
-router = routers.DefaultRouter()
-router.register(r"backend/post", PostViewSet)
-
+# router = routers.DefaultRouter()
+# router.register(r"backend/post", PostViewSet)
 
 urlpatterns = [
-    path("", include(router.urls)),
+    #path("", include(router.urls)),
     path('backend/admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
+    path(r'backend/post/', include('blog.urls'))
 ]
