@@ -5,7 +5,7 @@
             <h2 class="title">{{post.title}}</h2>
             <p class="author">{{post.created_on}} por {{post.author}}.</p>
             <hr>
-            <div v-html="post.body" class="post-content"></div>
+            <vue-simple-markdown heading=true :source="post.body"></vue-simple-markdown>
         </div>
     </div>
 </template>

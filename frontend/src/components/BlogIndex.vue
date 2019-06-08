@@ -4,7 +4,7 @@
             BLOG
         </h2>
         <div class="last_post">
-            <img src="https://sarcastickled.files.wordpress.com/2014/05/3545320-7140595685-hobbi.jpg" alt="Last post image" />
+            <img :src="last_post.image" alt="Nothing here yet" />
             <a :href="last_post.link">
                 <h3>{{last_post.title}}</h3>
                 <p>{{last_post.short_description}}</p>
@@ -90,7 +90,9 @@ export default {
     text-decoration: none;
     color: blue;
 }
-
+.blog_index{
+    min-height: 20em;
+}
 .blog_index > a{
     color: black;
     text-decoration: None;
